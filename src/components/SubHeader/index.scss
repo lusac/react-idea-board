@@ -1,21 +1,21 @@
 .idea-board {
-    &__sub-header {
-      height: 90px;
-        overflow: hidden;
-        line-height: 90px;
-        margin-bottom: 30px;
-        border-bottom: 1px solid #CCC;
+  &__sub-header {
+    height: 90px;
+    overflow: hidden;
+    line-height: 90px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #CCC;
 
-        &__left {
-            float: left;
+    &__left {
+      float: left;
 
-            label {
-              margin-right: 10px;
-            }
-        }
-
-        &__right {
-            float: right;
-        }
+      label {
+        margin-right: 10px;
+      }
     }
+
+    &__right {
+      float: right;
+    }
+  }
 }

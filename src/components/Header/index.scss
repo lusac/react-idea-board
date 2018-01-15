@@ -1,16 +1,16 @@
 .idea-board {
-    &__header {
-        height: 60px;
-        padding: 0px 20px;
-        background: #36363E;
-        box-shadow: 0px 1px 1px rgba(0,0,0, .5);
-    }
+  &__header {
+    height: 60px;
+    padding: 0px 20px;
+    background: #36363E;
+    box-shadow: 0px 1px 1px rgba(0,0,0, .5);
+  }
 
-    &__logo {
-        color: #FFF;
-        font-size: 25px;
-        line-height: 60px;
-        font-family: arial;
-        text-decoration: none;
-    }
+  &__logo {
+    color: #FFF;
+    font-size: 25px;
+    line-height: 60px;
+    font-family: arial;
+    text-decoration: none;
+  }
 }

@@ -1,80 +1,82 @@
 .card-idea {
-    $namespace: &;
-    float: left;
-    margin: 5px;
-    width: 220px;
-    height: 170px;
+  $namespace: &;
+  float: left;
+  margin: 5px;
+  width: 220px;
+  height: 170px;
+  display: block;
+  font-family: Arial;
+  position: relative;
+  background: #f6e570;
+  box-shadow: 1px 1px 4px rgba(0,0,0, 0.4);
+
+  &:hover {
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.4);
+
+    #{$namespace}__edit {
+      display: block;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    height: 20px;
     display: block;
-    font-family: Arial;
-    position: relative;
-    background: #f6e570;
-    box-shadow: 1px 1px 4px rgba(0,0,0, 0.4);
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    background: #f0dd6c;
+    font-family: monospace;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__section {
+    padding: 5px;
+  }
+
+  &__title {
+
+  }
+
+  &__description {
+    color: #000;
+    font-family: arial;
+  }
+
+  &__footer {
+    bottom: 0;
+    width: 100%;
+    padding: 4px 8px;
+    position: absolute;
+  }
+
+  &__like {
+    float: left;
+
+    svg, span {
+      display: inline-block;
+      vertical-align: middle;
+    }
 
     &:hover {
-        #{$namespace}__edit {
-            display: block;
-        }
+      span {
+        text-decoration: underline;
+      }
     }
+  }
 
-    &__header {
-        width: 100%;
-        height: 20px;
-        display: block;
-        font-size: 13px;
-        line-height: 21px;
-        text-align: center;
-        background: #f0dd6c;
-        font-family: monospace;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &__edit {
+    float: right;
+    display: none;
+  }
+
+  &__edit,
+  &__like {
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
     }
-
-    &__section {
-        padding: 5px;
-    }
-
-    &__title {
-
-    }
-
-    &__description {
-        color: #000;
-        font-family: arial;
-    }
-
-    &__footer {
-        bottom: 0;
-        width: 100%;
-        padding: 4px 8px;
-        position: absolute;
-    }
-
-    &__like {
-        float: left;
-
-        svg, span {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        &:hover {
-            span {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__edit {
-        float: right;
-        display: none;
-    }
-
-    &__edit,
-    &__like {
-        font-size: 14px;
-        cursor: pointer;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+  }
 }
