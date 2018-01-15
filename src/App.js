@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import IdeasBoard from './components/IdeasBoard';
 import {
   BrowserRouter as Router,
   Route,
@@ -31,7 +32,7 @@ class App extends Component {
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <IdeasBoard></IdeasBoard>
   </div>
 )
 
