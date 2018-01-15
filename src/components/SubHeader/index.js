@@ -11,10 +11,11 @@ class SubHeader extends React.Component {
             <option value="recents">Recentes</option>
             <option value="like+">Mais likes</option>
             <option value="like-">Menos Likes</option>
+            <option value="done">Feito</option>
           </select>
         </div>
         <div className="idea-board__sub-header__right">
-          <button>Nova Ideia</button>
+          <button className="btn">Nova ideia</button>
         </div>
       </div>
     )
