@@ -8,7 +8,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className="idea-board__header">
-        <div className="row">
+        <div className="wrapper">
           <Link to="/" className="idea-board__logo">Idea Board</Link>
         </div>
       </div>

@@ -7,6 +7,10 @@
 
         &__left {
             float: left;
+
+            label {
+              margin-right: 10px;
+            }
         }
 
         &__right {
