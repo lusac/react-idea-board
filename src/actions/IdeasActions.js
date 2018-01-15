@@ -1,10 +1,10 @@
 import * as allActions from './allActions';
 
-export function receiveStuff(data) {
-    return {type: allActions.RECEIVE_STUFF, stuff: data};
+export function receiveIdeas(data) {
+    return {type: allActions.RECEIVE_IDEAS, ideas: data};
 }
 
-export function fetchStuff() {
+export function fetchIdeas() {
     return (dispatch) => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response =>
@@ -15,7 +15,7 @@ export function fetchStuff() {
             )
             .then(response => {
                 if(response.status === 200){
-                    dispatch(receiveStuff(response.data))
+                    dispatch(receiveIdeas(response.data))
                 }else{
                     var flash = {
                         type: 'error',

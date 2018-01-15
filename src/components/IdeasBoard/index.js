@@ -1,22 +1,61 @@
 import React from 'react';
 import IdeaCard from '../IdeaCard';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as IdeasActions from '../../actions/IdeasActions';
+import PropTypes from 'prop-types';
 import './index.scss';
 
 class IdeasBoard extends React.Component {
-  getIdeias() {
-    const ideas = [1,2,3,4,5,6,7,8,9,0].map((number) =>
-      <IdeaCard key={number} />
-    );
-    return ideas
+  componentWillMount() {
+    this.props.IdeasActions.fetchIdeas();
+  }
+
+  renderData(item, index) {
+    return <IdeaCard key={index} />;
   }
 
   render() {
-    return (
-      <div>
-        {this.getIdeias()}
-      </div>
-    )
+    if(!this.props.ideas){
+      return (
+        <div>
+          Loading ideias...
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          {
+            this.props.ideas.map((item, index) => {
+              return (
+                this.renderData(item, index)
+              );
+            })
+          }
+        </div>
+      )
+    }
   }
 }
 
-export default IdeasBoard;
+IdeasBoard.propTypes = {
+    IdeasActions: PropTypes.object,
+    ideas: PropTypes.array
+};
+
+function mapStateToProps(state) {
+    return {
+        ideas: state.ideas
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+       IdeasActions: bindActionCreators(IdeasActions, dispatch)
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(IdeasBoard);
