@@ -13,17 +13,11 @@ class App extends Component {
       <Router>
         <div className="app">
           <Header />
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/page1">Page1</Link></li>
-            <li><Link to="/page2">Page2</Link></li>
-          </ul>
-
-          <hr/>
-
-          <Route exact path="/" component={Home}/>
-          <Route path="/page1" component={Page1}/>
-          <Route path="/page2" component={Page2}/>
+          <div class="row">
+            <Route exact path="/" component={Home}/>
+            <Route path="/page1" component={Page1}/>
+            <Route path="/page2" component={Page2}/>
+          </div>
         </div>
       </Router>
     );
@@ -32,7 +26,7 @@ class App extends Component {
 
 const Home = () => (
   <div>
-    <IdeasBoard></IdeasBoard>
+    <IdeasBoard />
   </div>
 )
 

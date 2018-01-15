@@ -8,7 +8,9 @@ class Header extends React.Component {
   render() {
     return (
       <div className="idea-board__header">
-        <Link to="/" className="idea-board__logo">Idea Board</Link>
+        <div className="row">
+          <Link to="/" className="idea-board__logo">Idea Board</Link>
+        </div>
       </div>
     )
   }
