@@ -1,0 +1,4 @@
+Desenvolvendo setup inicial.
+React + redux:
+
+https://code.likeagirl.io/tutorial-for-adding-redux-to-a-react-app-1a94cc1738e5
