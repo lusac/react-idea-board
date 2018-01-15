@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import SubHeader from './components/SubHeader';
 import IdeasBoard from './components/IdeasBoard';
 import {
   BrowserRouter as Router,
@@ -26,6 +27,7 @@ class App extends Component {
 
 const Home = () => (
   <div>
+    <SubHeader />
     <IdeasBoard />
   </div>
 )
