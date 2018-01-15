@@ -4,8 +4,7 @@ import SubHeader from './components/SubHeader';
 import IdeasBoard from './components/IdeasBoard';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 class App extends Component {
